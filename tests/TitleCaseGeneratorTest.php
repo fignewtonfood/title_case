@@ -67,5 +67,31 @@
             //Assert
             $this->assertEquals("The George and the Fury", $result);
         }
+
+        function test_makeTitleCase_allCapsToTitle()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "GEORGE";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("George", $result);
+        }
+
+        function test_makeTitleCase_mixedCapsToTitle()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "GeOrGe";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("George", $result);
+        }
     }
 ?>
