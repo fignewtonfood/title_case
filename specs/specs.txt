@@ -1,10 +1,11 @@
 Plain language specs                      input                         output
 
-1) One word to titlecase (TC)             george                        George
-2) Multiple words to TC                   george smith                  George Smith
-3) Multiple words to TC w/ exceptions     george goes to the store      George Goes to the Store
-4) Intraword exceptions to TC             george maccloud               George MacCloud
-5) All Caps to TC                         GEORGE                        George
-6) Partial Caps to TC                     gEoRgE                        George
-7) Special characters to TC               17 georges!                   17 Georges!
-8) Other exceptions to TC                 ke$ha                         Ke$ha
+1) One letter to titlecase (TC)           i                             I
+2) One word to TC                         george                        George
+3) Multiple words to TC                   george smith                  George Smith
+4) All Caps to TC                         GEORGE                        George
+5) Partial Caps to TC                     gEoRgE                        George
+6) Special characters to TC               17 georges!                   17 Georges!
+7) Multiple words to TC w/ exceptions     george goes to the store      George Goes to the Store
+8) Intraword exceptions to TC             george maccloud               George MacCloud
+9) Other exceptions to TC                 ke$ha                         Ke$ha
