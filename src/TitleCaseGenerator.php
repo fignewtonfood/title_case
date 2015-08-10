@@ -16,8 +16,7 @@
                 }
                 array_push($output, $lc);
             }
-            return implode (" ", $output);
-
+            return ucfirst(implode(" ", $output));
         }
     }
 ?>

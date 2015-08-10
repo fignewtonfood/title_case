@@ -54,5 +54,18 @@
             //Assert
             $this->assertEquals("George Goes to the Store", $result);
         }
+
+        function test_makeTitleCase_ignoreArticleException()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "the george and the fury";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("The George and the Fury", $result);
+        }
     }
 ?>
