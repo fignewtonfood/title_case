@@ -11,23 +11,20 @@
                 array_push($lc_output, strtolower($word));
                 array_push($output, ucfirst($word));
             }
-            $intersect = array_intersect($array_small_words, $lc_output);
-            print_r($intersect);
-            print_r($array_small_words);
-            if (!empty($intersect)) {
-                foreach ($lc_output as $lc) {
-                    foreach ($intersect as $intersection) {
-                        if($intersection != $lc) {
-                            array_push($output, ucfirst($lc));
-                        } else {
-                            array_push($output, $lc);
+            // $intersect = array_intersect($array_small_words, $lc_output);
+            // if (!empty($intersect)) {
+            foreach ($lc_output as $lc) {
 
-                        }
-                    }
+                // foreach ($intersect as $intersection) {
+                if(in_array($lc, $array_small_words)) {
+                    $lc = ucfirst($lc);
                 }
-            } else {
-                return implode (" ", $output);
+                array_push($output, $lc);
+                // }
             }
+            // } else {
+            //     return implode (" ", $output);
+            // }
         }
     }
 ?>
