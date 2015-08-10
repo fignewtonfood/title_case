@@ -93,5 +93,18 @@
             //Assert
             $this->assertEquals("George", $result);
         }
+
+        function test_makeTitleCase_specialCharacters()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input ="17 georges!";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("17 Georges!", $result);
+        }
     }
 ?>
