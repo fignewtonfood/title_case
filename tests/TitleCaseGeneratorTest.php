@@ -52,7 +52,7 @@
             $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
             //Assert
-            $this->assertEquals("George Goes to the Store");
+            $this->assertEquals("George Goes to the Store", $result);
         }
     }
 ?>
