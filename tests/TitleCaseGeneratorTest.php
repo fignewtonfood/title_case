@@ -15,5 +15,31 @@
             //Assert
             $this->assertEquals("I", $result);
         }
+
+        function test_makeTitleCase_oneWord()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "george";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("George", $result);
+        }
+
+        function test_makeTitleCase_multWords()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "george smith";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("George Smith", $result);
+        }
     }
 ?>
