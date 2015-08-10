@@ -106,5 +106,18 @@
             //Assert
             $this->assertEquals("17 Georges!", $result);
         }
+
+        function test_makeTitleCase_intrawordExceptions()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "george maccloud";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("George MacCloud", $result);
+        }
     }
 ?>
